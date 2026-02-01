@@ -19,3 +19,10 @@ async def upload_video(file: UploadFile = File(...)):
 async def process_video(video_path: str, background_tasks: BackgroundTasks):
     background_tasks.add_task(process_video_pipeline, video_path)
     return {"status": "processing started"}
+    import os
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
+
