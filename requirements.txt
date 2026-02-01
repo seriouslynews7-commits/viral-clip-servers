@@ -1,7 +1,11 @@
 fastapi
 uvicorn
 moviepy
-openai-whisper
-opencv-python
 ffmpeg-python
 python-multipart
+fastapi
+uvicorn
+moviepy
+ffmpeg-python
+python-multipart
+requests
