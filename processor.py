@@ -4,13 +4,17 @@ from moviepy.editor import VideoFileClip
 
 API_KEY = os.getenv("OPENAI_API_KEY")
 
+from openai import OpenAI
+
+client = OpenAI(api_key=API_KEY)
+
 def transcribe_audio(file_path):
-    url = "https://api.openai.com/v1/audio/transcriptions"
-    headers = {"Authorization": f"Bearer {API_KEY}"}
-    files = {"file": open(file_path, "rb")}
-    data = {"model": "whisper-1"}
-    response = requests.post(url, headers=headers, files=files, data=data)
-    return response.json()["text"]
+    with open(file_path, "rb") as audio_file:
+        transcript = client.audio.transcriptions.create(
+            model="gpt-4o-mini-transcribe",
+            file=audio_file
+        )
+    return transcript.text
 
 def process_video_pipeline(video_path):
     print("Transcribing audio...")
