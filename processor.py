@@ -2,8 +2,7 @@ import os
 import requests
 from moviepy.editor import VideoFileClip
 
-API_KEY = os.getenvsk-proj-DNH_MFG9XBcFXsRHqZPSjY21Yv849szJpdayLlARf2lvwkl4nqLoplNN9qCDU2NH8hQyuQjkK7T3BlbkFJ3NFZ98fA3-fBPotqTLFMFwegX-VzqwDk6KOTCOhZS-Hb97VhZvT_CAA5tTjOsamnfPaU5gT4QA
-
+API_KEY = os
 from openai import OpenAI
 
 client = OpenAI(api_key=API_KEY)
