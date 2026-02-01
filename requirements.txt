@@ -4,6 +4,8 @@ gunicorn
 python-multipart
 requests
 moviepy==1.0.3
+imageio
+imageio-ffmpeg
 ffmpeg-python
 openai
 python-dotenv
