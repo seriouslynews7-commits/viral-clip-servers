@@ -4,6 +4,10 @@ from processor import process_video_pipeline
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"status": "server is running"}
+
 @app.post("/upload")
 async def upload_video(file: UploadFile = File(...)):
     path = f"{file.filename}"
