@@ -1,11 +1,10 @@
 fastapi
 uvicorn
-moviepy
 ffmpeg-python
 python-multipart
 fastapi
 uvicorn
-moviepy
 ffmpeg-python
 python-multipart
 requests
+moviepy==1.0.3
