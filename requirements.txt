@@ -1,12 +1,9 @@
 fastapi
 uvicorn
-ffmpeg-python
-python-multipart
-fastapi
-uvicorn
-ffmpeg-python
+gunicorn
 python-multipart
 requests
 moviepy==1.0.3
-gunicorn
-
+ffmpeg-python
+openai
+python-dotenv
