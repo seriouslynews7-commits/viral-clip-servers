@@ -2,10 +2,11 @@ import os
 from moviepy.editor import VideoFileClip
 from openai import OpenAI
 
-API_KEY = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=API_KEY)
+import os
+from moviepy.editor import VideoFileClip
+from openai import OpenAI
 
-
+client = OpenAI()   # ← CHANGE THIS LINE
 def transcribe_audio_from_video(video_path):
     audio_path = "temp_audio.wav"
 
